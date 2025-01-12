@@ -1,0 +1,19 @@
+server:
+  port: 8888
+
+spring:
+  application:
+    name: Config_server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/MatiasValdiviesoUisrael/tarea5
+          clone-on-start: true
+  profiles:
+    active: native
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
